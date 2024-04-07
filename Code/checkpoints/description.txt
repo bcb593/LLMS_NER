@@ -1,0 +1,1 @@
+Folder contains model checkpoints for BERT model trained on entire legal documents in sequences of 512 or smaller.
