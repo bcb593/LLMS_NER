@@ -1,0 +1,45 @@
+Create a Named Entity Recognition (NER) model to categorize each word as a token from contracts into 42 distinct labels, where one label is designated for 
+text segments that don't fit into the other 41 predefined categories. Each word should be given label by the model. 
+
+Document Name: Identify the name of the contract.
+Parties: Recognize the entities (two or more) who have signed the contract.
+Agreement Date: Detect the date when the contract was agreed upon.
+Effective Date: Find the date from which the contract is considered effective.
+Expiration Date: Identify the date when the contract’s initial term will expire.
+Renewal Term: Extract information about the renewal terms after the initial term, including automatic and unilateral extensions with prior notice.
+Notice to Terminate Renewal: Detect the required notice period for terminating the renewal.
+Governing Law: Identify which state or country’s law governs the contract.
+Most Favored Nation: Look for clauses that entitle the buyer to better terms if a third party gets better terms.
+Non-Compete: Recognize any restrictions on a party's ability to compete with the counterparty or operate in a specific sector.
+Exclusivity: Identify exclusive dealing commitments or prohibitions on collaborating with third parties.
+No-Solicit of Customers: Detect restrictions on contracting or soliciting customers or partners of the counterparty.
+Competitive Restriction Exception: Find exceptions to Non-Compete, Exclusivity, and No-Solicit of Customers.
+No-Solicit of Employees: Recognize restrictions on soliciting or hiring employees and/or contractors from the counterparty.
+Non-Disparagement: Detect requirements not to disparage the counterparty.
+Termination for Convenience: Identify if a contract can be terminated without cause.
+ROFR/ROFO/ROFN: Look for rights of first refusal, offer, or negotiation clauses.
+Change of Control: Detect rights or requirements upon a party's change of control.
+Anti-Assignment: Identify if consent or notice is required for contract assignment.
+Revenue/Profit Sharing: Recognize requirements for revenue or profit sharing.
+Price Restriction: Identify restrictions on the ability to adjust prices.
+Minimum Commitment: Detect minimum order sizes or purchase amounts.
+Volume Restriction: Look for fees or consent requirements for exceeding usage thresholds.
+IP Ownership Assignment: Identify clauses assigning IP ownership to the counterparty.
+Joint IP Ownership: Detect clauses for joint or shared IP ownership.
+License Grant: Recognize the grant of licenses from one party to another.
+Non-Transferable License: Identify restrictions on license transferability.
+Affiliate IP License - Licensor: Look for licenses that include the IP of the licensor’s affiliates.
+Affiliate IP License - Licensee: Detect licenses granted to a licensee and its affiliates.
+Unlimited/All-You-Can-Eat License: Recognize clauses for unlimited usage licenses.
+Irrevocable or Perpetual License: Identify irrevocable or perpetual license grants.
+Source Code Escrow: Detect requirements for source code escrow deposits.
+Post-Termination Services: Look for obligations after contract termination or expiration.
+Audit Rights: Identify the right to audit the counterparty's compliance with the contract.
+Uncapped Liability: Recognize if a party’s liability is uncapped for breaches.
+Cap on Liability: Detect caps on liability for breaches of the contract.
+Liquidated Damages: Identify clauses for liquidated damages upon breach.
+Warranty Duration: Recognize the duration of warranties against defects.
+Insurance: Detect requirements for maintaining insurance.
+Covenant Not to Sue: Look for restrictions on contesting IP ownership or bringing unrelated claims.
+Third Party Beneficiary: Identify non-contracting parties who can enforce contract clauses.
+Outside Labels: Recognize text segments that do not fit into the other 41 categories.

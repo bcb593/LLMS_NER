@@ -1,0 +1,63 @@
+Create a Named Entity Recognition (NER) model to categorize text segments from contracts into 42 distinct labels, where one label is designated for text segments that don't fit into the other 41 predefined categories. These categories encompass various contractual elements such as document names, party names, and specific clauses related to the agreement terms, effectiveness, expiration, renewals, governing laws, and restrictions, among others. The model should accurately identify and classify text snippets into relevant categories, including but not limited to the name of the document, the parties involved, agreement dates, effective and expiration dates, renewal terms, and conditions for termination. It should also recognize clauses regarding governing law, most favored nation status, non-compete agreements, exclusivity terms, non-solicitation of customers and employees, non-disparagement clauses, termination for convenience, and various rights like ROFR/ROFO/ROFN, change of control, anti-assignment, revenue/profit sharing, and intellectual property considerations including IP ownership assignment, joint IP ownership, and license grants. Additional categories cover contractual terms regarding price restrictions, minimum commitments, volume restrictions, unlimited licenses, source code escrow, post-termination services, audit rights, liability caps and uncaps, liquidated damages, warranty durations, insurance requirements, non-sue covenants, and third-party beneficiaries. This comprehensive model aids in automating the contract review process, highlighting key contractual terms, and ensuring efficient contract management and compliance.
+
+Input: 
+Exhibit 10.28 PRODUCT SALE AND MARKETING AGREEMENT THIS PRODUCT SALE AND MARKETING AGREEMENT (this "Agreement") is made this 12th day of November, 2018 12th day of November, 2018 (the "Effective Date"), by and between Calm.com, Inc., a Delaware corporation, having offices at 140 2nd Street, 3rd Floor, San Francisco, California 94105 (" a Delaware corporation)
+
+Output: 
+ 'Exhibit', Outside
+ '10.28',  Outside
+ 'PRODUCT', DOC_NAME
+ 'SALE', DOC_NAME
+ 'AND', DOC_NAME
+ 'MARKETING', DOC_NAME
+ 'AGREEMENT', DOC_NAME
+ 'THIS', OUTSIDE
+ 'PRODUCT', DOC_NAME
+ 'SALE', DOC_NAME
+ 'AND', DOC_NAME
+ 'MARKETING', DOC_NAME
+ 'AGREEMENT', DOC_NAME
+ '(this', OUTSIDE
+ '"Agreement")', OUTSIDE
+ 'is', OUTSIDE
+ 'made', OUTSIDE
+ 'this', OUTSIDE
+ '12th', AGR_DATE
+ 'day', AGR_DATE
+ 'of', AGR_DATE
+ 'November,' AGR_DATE
+ '2018', AGR_DATE
+ '12th', EFFECT_DATE
+ 'day', EFFECT_DATE
+ 'of', EFFECT_DATE
+ 'November,', EFFECT_DATE
+ '2018', EFFECT_DATE
+ '(the', OUTSIDE
+ '"Effective', OUTSIDE
+ 'Date"), OUTSIDE
+ 'by', OUTSIDE
+ 'and', OUTSIDE
+ 'between', OUTSIDE
+ 'Calm.com,',  DOC_NAME
+ 'Inc.,',  DOC_NAME
+ 'a', OUTSIDE
+ 'Delaware', OUTSIDE
+ 'corporation,', OUTSIDE
+ 'having', OUTSIDE
+ 'offices', OUTSIDE
+ 'at', OUTSIDE
+ '140', OUTSIDE
+ '2nd', OUTSIDE
+ 'Street,', OUTSIDE
+ '3rd', OUTSIDE
+ 'Floor,', OUTSIDE
+ 'San', OUTSIDE
+ 'Francisco,', OUTSIDE
+ 'California', OUTSIDE
+ '94105', OUTSIDE
+ '("', OUTSIDE
+ 'a',OUTSIDE
+ 'Delaware', OUTSIDE
+ 'corporation' OUTSIDE, 
+
+Input:
